@@ -8,14 +8,9 @@ const app=express();
 
 var String  =""
 
-for (let i = 20; i < 23; i++) {
+for (let i = 2081; i < 2209; i++) {
 
-    for (let j = 1;  j< 12; j++) {
-    if(j<10)
-    {
-        String=`${i}`+"0"
-    }
-    String=String+`${j}`
+   String=`${i}`
  
 const url=`https://www.baloto.com/resultados-baloto/${String}`
 axios(url)
@@ -30,15 +25,15 @@ axios(url)
        })
        
         })
-        console.log(String+`${j}`)
+        console.log(url)
         console.log(articles)
-'mt-5 border-right-blue mobile-without-margin'
+
 
         
-    }).catch()
+    }).catch(err=>console.log("1"))
 
-    String  =`${i}`
+  
 }
-}
+
 
 app.listen(PORT,()=>console.log(`server running in port${PORT}`))
